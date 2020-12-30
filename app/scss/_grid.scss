@@ -1,0 +1,124 @@
+.grid {
+    display: grid;
+    width: 50%;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "cta cta"
+    "pricing whyus"
+    ;
+    box-shadow: 5px 5px 30px 5px rgba(179,179,179,1);
+    border-radius: 8px;
+    overflow: hidden;
+
+    &__cta {
+        grid-area: cta;
+        background-color: white;
+        padding: 25px;
+
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+            color: $cyan;
+        }
+
+        h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: $brightYellow;
+        }
+
+        h6 {
+            font-size: 14px;
+            font-weight: 400;
+            color: $grayishBlue;
+        }
+    }
+
+    &__pricing {
+        grid-area: pricing;
+        background-color: $cyan;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 25px;
+
+        :nth-child(2) {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        h4 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+        }
+
+        h6 {
+            margin: 0;
+            margin-bottom: 5px;
+            font-size: 14px;
+            font-weight: 400;
+            color: $lightGray;
+
+            > span {
+                font-size: 20px;
+                font-weight: 700;
+                color: white;
+            }
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            background-color: $brightYellow;
+            border-radius: 3px;
+            width: 200px;
+            height: 30px;
+            text-align: center;
+        }
+    }
+
+    &__whyus {
+        grid-area: whyus;
+        background-color: $lightCyan;
+        padding: 25px;
+
+        > h4 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        > h6 {
+            margin: 0;
+            margin-bottom: 5px;
+            font-size: 14px;
+            font-weight: 400;
+            color: $lightGray;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+
+        a{
+            width: 90%;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

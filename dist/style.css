@@ -1,0 +1,144 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+  background-color: #e5eff5;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.grid {
+  display: grid;
+  width: 50%;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "cta cta" "pricing whyus";
+  box-shadow: 5px 5px 30px 5px #b3b3b3;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.grid__cta {
+  grid-area: cta;
+  background-color: white;
+  padding: 25px;
+}
+
+.grid__cta h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2ab2af;
+}
+
+.grid__cta h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #c0df34;
+}
+
+.grid__cta h6 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #98a6bd;
+}
+
+.grid__pricing {
+  grid-area: pricing;
+  background-color: #2ab2af;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 25px;
+}
+
+.grid__pricing :nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.grid__pricing h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+}
+
+.grid__pricing h6 {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #e5eff5;
+}
+
+.grid__pricing h6 > span {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+
+.grid__pricing a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  background-color: #c0df34;
+  border-radius: 3px;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+}
+
+.grid__whyus {
+  grid-area: whyus;
+  background-color: #26c9c7;
+  padding: 25px;
+}
+
+.grid__whyus > h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.grid__whyus > h6 {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #e5eff5;
+}
+
+@media only screen and (max-width: 768px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+  .grid a {
+    width: 90%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */
